@@ -97,22 +97,56 @@ background: rgba(0, 0, 0, 0.494); */
 .menu__list>li:hover .sub-menu__list {
     display: block;
 }
+
+
+
+
+
+
+
 .menu__link {
     color: white;
+    position: relative;
 }
 .menu__link:hover {
-    /* text-decoration: underline; */
-    border-bottom: solid white 1px;
-    transform: 2s;
+    /* border-bottom: solid white 1px; */
+    color: #FFFFFF;
 }
+.menu__link:hover::before {
+    transform: scaleX(1);
+    transition: transform 0.25s;
+}
+.menu__link::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.33s;
+}
+
+
+
+
+
+
+
+
+
+
 .sub-menu__list {
     display: none;
     position: absolute;
     padding: 20px 0px 0px 0px;
     background: rgb(47, 113, 163, 0.7);
     text-transform: initial;
-}
 
+    /* вопрос насчёт такого решения */
+    right: -38px;
+}
 .sub-menu__list>li {
     align-items: center;
     display: flex;
@@ -137,10 +171,11 @@ background: rgba(0, 0, 0, 0.494); */
 /*Logo, title and subtitle*/
 .full-screen__subtitle {
     padding: 22px 0px 22px 0px;
+    font-size: 18px;
 }
 
 .full-screen__title {
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .full-screen__logo {
@@ -180,6 +215,7 @@ background: rgba(0, 0, 0, 0.494); */
     align-items: flex-end;
     justify-content: space-between;
     padding: 20px 26px 20px 26px;
+    height: 194px;
 }
 .item__link {
     display: flex;
@@ -189,9 +225,40 @@ background: rgba(0, 0, 0, 0.494); */
     line-height: 200%;
     text-align: right;
 }
+
+
+
+
+
+
 .item__link a {
+    position: relative;
     color: #FFFFFF;
 }
+.item__link a:hover {
+    color: #FFFFFF;
+}
+.item__link a:hover::before {
+    transform: scaleX(1);
+    transition: transform 0.25s;
+}
+.item__link a::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transform: scaleX(0);
+    transition: transform 0.33s;
+    transform-origin: left;
+}
+
+
+
+
+
 
 .item__button {}
 .item__button a {
@@ -213,3 +280,189 @@ background: rgba(0, 0, 0, 0.494); */
     height: 57px; 
 }
 /* The end - two cards on full-screen */
+
+
+
+
+
+
+/* All setting Storinka spojivacha and next*/
+.container__background-color {
+    background: rgba(36, 135, 206, 0.06);
+}
+.content {
+    
+}
+h2 {
+    display: flex;
+    justify-content: center;
+
+    padding: 90px 0px 63px 0px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+.button-card {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    /* padding: 10.7222px 25.4653px; */
+    /* gap: 6.7px; */
+    width: 120px;
+    height: 36px;
+    background: #2487CE;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+/* The end - all setting Storinka spojivacha and next*/
+
+
+
+
+
+
+
+/* Storinka spojivacha*/
+.content__container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+.storinka-spojivacha {
+}
+.spojivach__title {
+}
+.spojivach__container {
+}
+.spojivach__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.spojivach__card {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    padding: 25px 40px;
+    gap: 15px;
+    margin: 0px 0px 25px 0px;
+
+    flex: 0 1 50%;
+    max-width: 598px;
+    height: 340px;
+
+    background: rgba(255, 255, 255, 0.46);
+
+    /* Shadow */
+    box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.spojivach-card__icon {
+}
+.spojivach-card__title {
+    font-weight: 700;
+    font-size: 18px;
+}
+.spojivach-card__text {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0px 0px 0px 20px;
+
+    height: 140px;
+}
+.spojivach-card__text li {
+    list-style-type: disc;
+}
+
+.spojivach-card__button {}
+/* The end - Storinka spojivacha*/
+
+
+
+
+
+
+
+/* Dodatkovi poslugi*/
+
+.dodatkovi-poslugi {
+}
+.poslugi__title {
+}
+.poslugi__container {
+}
+.poslugi__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.poslugi__card {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    padding: 25px 40px;
+    gap: 15px;
+    margin: 0px 0px 25px 0px;
+
+    flex: 0 1 50%;
+    max-width: 390px;
+    height: 340px;
+
+    background: rgba(255, 255, 255, 0.46);
+
+    /* Shadow */
+    box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.poslugi-card__icon {
+}
+.poslugi-card__title {
+    font-weight: 700;
+    font-size: 18px;
+}
+.poslugi-card__text {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0px 0px 0px 20px;
+    height: 140px;
+}
+.poslugi-card__text li {
+    list-style-type: disc;
+}
+.poslugi-card__button {
+}
+.button-card {
+}
+/* The end - Dodatkovi poslugi*/
+
+
+
+
+/* News */
+.content__container {
+}
+.news {
+}
+.news__title {
+    font-weight: 700;
+    font-size: 18px;
+}
+.news__container {
+}
+/* The end - News*/
+
+
+
+
+
+/* Footer*/
+
+/* The end - Footer*/
+
+
+/* Сделать потом: */
+
+/* скрестить все H2 */
