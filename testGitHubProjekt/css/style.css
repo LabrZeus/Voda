@@ -23,12 +23,6 @@ body {
     /* гугл шрифт 400 и 700 */
     font-family: 'Inter', sans-serif;
 }
-
-/* 
-background: rgba(0, 0, 0, 0.494); */
-
-
-
 .wrapper {
     
 }
@@ -83,21 +77,95 @@ background: rgba(0, 0, 0, 0.494); */
 
     background: #2F71A3;
     border-bottom: 1px solid #1C4B6F;
+
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.menu__list {
+.header__logo {
+    position: relative;
+    width: 40px;
+    left: 37%;
+}
+.menu__icon {
+    display: none;
+}
+@media (min-width: 767px) {
+    .menu__list {
+        display: flex;
+        font-size: 16px;
+        gap: 75px;
+    }
+    .menu__list>li {
+        margin: 0px 10px 0px 0px;
+        position: relative;
+    }
+}
+/* .menu__list {
     display: flex;
     font-size: 16px;
     gap: 75px;
-}
-.menu__list>li {
+} */
+/* .menu__list>li {
     margin: 0px 10px 0px 0px;
     position: relative;
-}
+} */
 .menu__list>li:hover .sub-menu__list {
     display: block;
 }
-
+@media (max-width: 767px) {
+    .menu__icon {
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+    }
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
+    .menu__icon::before {
+        top: 0;
+    }
+    .menu__icon::after {
+        bottom: 0;
+    }
+    .menu__icon span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(16, 16, 16, 0.881);
+        transition: left 0.3s ease 0s;
+    }
+    .menu__list > li {
+        margin: 0px 0px 30px 0px;
+    }
+    .menu__list > li:last-child {
+        margin-bottom: 0;
+    }
+    .menu__link {
+        font-size: 24px;
+    }
+}
 
 
 
@@ -167,6 +235,10 @@ background: rgba(0, 0, 0, 0.494); */
     padding: 5px 10px;
 }
 /*Конец меню-навигации*/
+
+/*Меню-бургер (адаптив)*/
+
+/*The end - Меню-бургер (адаптив)*/
 
 /*Logo, title and subtitle*/
 .full-screen__subtitle {
@@ -459,7 +531,35 @@ h2 {
 
 
 /* Footer*/
-
+.contacts {
+}
+.contacts__title {
+}
+.contacts__container {
+    display: flex;
+    padding: 0px 15px 30px 15px;
+}
+.contacts__block-items {
+    flex: 0 1 50%;
+}
+.contacts__item {
+}
+.contacts-item__icon {
+}
+.contacts-item__block {
+    padding: 30px 0px 0px 0px;
+}
+.contacts-block__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+.contacts-block__text {
+    font-size: 18px;
+    line-height: 22px;
+}
+.contacts__block-map {
+}
 /* The end - Footer*/
 
 
