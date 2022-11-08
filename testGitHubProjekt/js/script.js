@@ -9,7 +9,7 @@ document.querySelectorAll('a.yakor').forEach(link => {
 
         const scrollTarget = document.getElementById(href)
 
-        const topOffset = -30
+        const topOffset = -5
         const elementPosition = scrollTarget.getBoundingClientRect().top
         const offsetPosition = elementPosition - topOffset
 

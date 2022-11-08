@@ -81,12 +81,15 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+
+    z-index: 1;
 }
 
 .header__logo {
     position: relative;
     width: 40px;
     left: 37%;
+    z-index: 1;
 }
 .menu__icon {
     display: none;
@@ -114,7 +117,10 @@ body {
 .menu__list>li:hover .sub-menu__list {
     display: block;
 }
-@media (max-width: 767px) {
+
+
+
+/* @media (max-width: 767px) {
     .menu__icon {
         z-index: 5;
         display: block;
@@ -165,7 +171,7 @@ body {
     .menu__link {
         font-size: 24px;
     }
-}
+} */
 
 
 
@@ -209,7 +215,8 @@ body {
     display: none;
     position: absolute;
     padding: 20px 0px 0px 0px;
-    background: rgb(47, 113, 163, 0.7);
+    background: rgba(47, 113, 163, 0.73);
+    backdrop-filter: blur(10px);
     text-transform: initial;
 
     /* вопрос насчёт такого решения */
@@ -274,6 +281,8 @@ body {
     margin: 0 14px 0 14px;
     background: rgba(36, 135, 206, 0.7);
     border-radius: 5px;
+
+    display: none;
 }
 .screen__block {
     flex: 0 1 50%;
@@ -358,6 +367,10 @@ body {
 
 
 
+
+
+
+
 /* All setting Storinka spojivacha and next*/
 .container__background-color {
     background: rgba(36, 135, 206, 0.06);
@@ -369,7 +382,7 @@ h2 {
     display: flex;
     justify-content: center;
 
-    padding: 90px 0px 63px 0px;
+    padding: 63px;
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
@@ -397,7 +410,7 @@ h2 {
 
 /* Storinka spojivacha*/
 .content__container {
-    max-width: 1250px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0px 15px;
 }
@@ -415,21 +428,19 @@ h2 {
 .spojivach__card {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: flex-start;
     padding: 25px 40px;
     gap: 15px;
-    margin: 0px 0px 25px 0px;
-
-    flex: 0 1 50%;
-    max-width: 598px;
+    margin: 9px;
+    flex: 1 1 50%;
+    max-width: 666px;
     height: 340px;
-
     background: rgba(255, 255, 255, 0.46);
-
-    /* Shadow */
-    box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: rgb(0 0 0 / 40%) 0px 0px 18px -5px;
     border-radius: 10px;
+}
+.spojivach__card:last-child {
+    margin-bottom: 50px;
 }
 .spojivach-card__icon {
 }
@@ -447,8 +458,36 @@ h2 {
 .spojivach-card__text li {
     list-style-type: disc;
 }
-
 .spojivach-card__button {}
+
+
+@media (max-width: 1400px) {
+    .spojivach__card {
+        margin: 11px;
+        flex: 1 1 48%;
+    }
+}
+@media (max-width: 1200px) {
+    .spojivach__card {
+        margin: 14px;
+        flex: 1 1 47%;
+    }
+}
+@media (max-width: 992px) {
+    .spojivach__card {
+        margin: 11px;
+        flex: 1 1 46%;
+    }
+}
+@media (max-width: 838px) {
+    .spojivach-card__button {
+        display: none;
+    }
+    /* !!!!сделать ссылка карточка начиная с данного размера!!!! */
+}
+/* нужно каждой карточке задать минимальную ширину,
+        подрезать высоту и менять отступы.
+        Возможно нужно изменить % флекса */
 /* The end - Storinka spojivacha*/
 
 
