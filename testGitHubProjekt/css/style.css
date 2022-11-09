@@ -387,6 +387,14 @@ h2 {
     font-size: 36px;
     line-height: 44px;
 }
+@media (max-width: 576px) {
+    h2 {
+        padding: 30px;
+        font-size: 33px;
+        line-height: 37px;
+        text-align: center;
+    }
+}
 .button-card {
     display: flex;
     /* flex-direction: row; */
@@ -477,13 +485,50 @@ h2 {
     .spojivach__card {
         margin: 11px;
         flex: 1 1 46%;
+        padding: 15px 33px;
+    }
+    .spojivach-card__text {
+        padding: 0px 0px 0px 15px;
+        height: 154px;
     }
 }
-@media (max-width: 838px) {
+@media (max-width: 762px) {
+    .spojivach__card {
+        max-width: 710px;
+        margin: 11px;
+        flex: 1 1 47%;
+        padding: 35px 50px;
+    }
+    .spojivach-card__title {
+        font-size: 20px;
+    }
+    .spojivach-card__text {
+        padding: 0px 0px 0px 20px;
+        font-size: 18px;
+        line-height: 22px;
+    }
     .spojivach-card__button {
         display: none;
     }
     /* !!!!сделать ссылка карточка начиная с данного размера!!!! */
+}
+@media (max-width: 576px) {
+    .content__container {
+        padding: 0px 1px;
+      }
+    .spojivach__card {
+        padding: 10px;
+    }
+    .spojivach-card__title {
+        font-size: 20px;
+    }
+    .spojivach-card__text {
+        padding: 0px 0px 0px 20px;
+        font-size: 18px;
+    }
+    .spojivach-card__button {
+        display: none;
+    }
 }
 /* нужно каждой карточке задать минимальную ширину,
         подрезать высоту и менять отступы.
@@ -519,7 +564,7 @@ h2 {
     margin: 0px 0px 25px 0px;
 
     flex: 0 1 50%;
-    max-width: 390px;
+    max-width: 440px;
     height: 340px;
 
     background: rgba(255, 255, 255, 0.46);
@@ -528,6 +573,9 @@ h2 {
     box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
 }
+.poslugi__card:last-child {
+    margin-bottom: 50px;
+  }
 .poslugi-card__icon {
 }
 .poslugi-card__title {
@@ -538,14 +586,78 @@ h2 {
     font-size: 16px;
     line-height: 19px;
     padding: 0px 0px 0px 20px;
-    height: 140px;
+    height: 100%;
 }
 .poslugi-card__text li {
     list-style-type: disc;
 }
+.poslugi-card__text p {
+    padding-bottom: 5px;
+}
+.poslugi-card__text ul {
+    padding-left: 15px;
+}
 .poslugi-card__button {
 }
 .button-card {
+}
+
+
+
+
+
+
+@media (max-width: 1400px) {
+    .poslugi__card {
+        flex: 0 1 32%;
+        padding: 25px 33px;
+    }
+    /* .poslugi-card__text {
+        height: 100%;
+    } */
+}
+@media (max-width: 1200px) {
+    .poslugi__card {
+        padding: 15px 13px;
+    }
+    /* .poslugi-card__text {
+        height: 100%;
+    } */
+}
+@media (max-width: 992px) {
+    .poslugi__card {
+        padding: 10px;
+    }
+    .poslugi-card__text {
+        line-height: 17px;
+        padding: 0px 0px 0px 10px;
+        /* height: 100%; */
+    }
+}
+@media (max-width: 762px) {
+    .poslugi__card {
+        max-width: 710px;
+        margin: 11px;
+        flex: 1 1 47%;
+        padding: 35px 50px;
+    }
+    .poslugi-card__title {
+        font-size: 20px;
+    }
+    .poslugi-card__text {
+        padding: 0px 0px 0px 20px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .poslugi-card__button {
+        display: none;
+    }
+    /* !!!!сделать ссылка карточка начиная с данного размера!!!! */
+}
+@media (max-width: 576px) {
+    .poslugi__card {
+        padding: 10px;
+    }
 }
 /* The end - Dodatkovi poslugi*/
 
