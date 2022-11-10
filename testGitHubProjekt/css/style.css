@@ -275,14 +275,12 @@ body {
     padding: 39px 0px 0px 0px;
 }
 .screen__block-container {
-    width: 514px;
+    max-width: 514px;
     height: 243px;
 
     margin: 0 14px 0 14px;
     background: rgba(36, 135, 206, 0.7);
     border-radius: 5px;
-
-    display: none;
 }
 .screen__block {
     flex: 0 1 50%;
@@ -359,6 +357,44 @@ body {
 
     width: 210px;
     height: 57px; 
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .button {
+        width: 193px;
+    }
+    .item__link {
+        padding-left: 20px;
+    }
+}
+@media (max-width: 992px) {
+    .full-screen__cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .screen__block-container {
+        margin-bottom: 25px;
+    }
+    .button {
+        width: 210px;
+    }
+    .item__link {
+        font-size: 16px;
+    }
+}
+@media (max-width: 762px) {
+
+}
+@media (max-width: 576px) {
+    
 }
 /* The end - two cards on full-screen */
 
@@ -515,7 +551,7 @@ h2 {
 @media (max-width: 576px) {
     .content__container {
         padding: 0px 1px;
-      }
+    }
     .spojivach__card {
         padding: 21px;
     }
@@ -580,7 +616,7 @@ h2 {
 }
 .poslugi__card:last-child {
     margin-bottom: 50px;
-  }
+}
 .poslugi-card__icon {
 }
 .poslugi-card__title {
@@ -634,7 +670,7 @@ h2 {
         padding: 10px;
     }
     .poslugi-card__text {
-        line-height: 17px;
+        line-height: 16px;
         padding: 0px 0px 0px 10px;
         /* height: 100%; */
     }
@@ -734,8 +770,8 @@ h2 {
     line-height: 22px;
 }
 .contacts__block-map {
+    
 }
-
 
 
 @media (max-width: 1400px) {
@@ -749,9 +785,21 @@ h2 {
     }
 }
 @media (max-width: 992px) {
+    .contacts__block-items {
+        flex: 0 0 56%;
+    }
     .contacts__block-map {
         padding-top: 30px;
         margin: 0 auto;
+    }
+}
+@media (max-width: 762px) {
+
+}
+@media (max-width: 655px) {
+    .contacts__block-map iframe{
+        width: 100%;
+        margin-right: 30px;
     }
 }
 /* The end - Footer*/
