@@ -412,16 +412,19 @@ body {
         padding: 20px 10px 20px 10px;
         height: 100%;
     }
-    .button {
-        width: 210px;
-    }
-    .item__button a {
+    /* .item__button a {
         width: 88%;
-    }
+    } */
     .item__link {
         font-size: 17px;
         text-align: center;
         padding: 0;
+    }
+    .button {
+        width: 210px;
+    }
+    .item__button {
+        margin: 30px 0px;
     }
 }
 @media (max-width: 768px) {
@@ -458,9 +461,6 @@ body {
         text-align: center;
         font-size: 18px;
         line-height: 40px;
-    }
-    .item__button {
-        margin: 30px 0px;
     }
 }
 @media (max-width: 400px) {
